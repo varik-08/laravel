@@ -11,22 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/getDigit/{digit}', function ($digit) {
-    echo $digit." Hello!";
-});
-
-Route::get('/getDigit/', function () {
-    echo "Bay!";
-});
+Route::view('/','welcome');
 
 Route::get('/id{digits?}', 'UserController@id');
 
 
-route::get('/form',function(){
-return view('form');
-});
-Route::post('/form',array('uses'=>'UserController@form'));
+//route::view('/form', 'form');
+//Route::post('/form',array('uses'=>'UserController@form'));
+
+//Route::match(['get','post'],'/form', ['uses'=>'UserController@form','as' => 'form']);
+
+Route::get('/form', 'UserController@form1');
+Route::post('/form', 'UserController@form2');

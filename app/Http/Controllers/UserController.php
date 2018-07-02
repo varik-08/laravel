@@ -6,16 +6,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function id($digits = null)
+    public function id($digits = "Пользователь не зарегистрирован!")
     {
-        if($digits == null) return "Пользователь не зарегистрирован!";
-        return $digits;
+        return view('id', compact('digits'));
     }
 
-    public function form(Request $request){
-    //Извлекаем данные поля name
-    $name = $request->name;
-    echo 'форма принята: '.$name;
+    public function form1(){
+        return view('form');
     }
 
+    public function form2(){
+        return view('form2');
+    }
 }
