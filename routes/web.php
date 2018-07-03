@@ -13,13 +13,9 @@
 
 Route::view('/','welcome');
 
-Route::get('/id{digits?}', 'UserController@id');
 
+Route::get('/id{digits?}', 'UserController@id')->where('digits','[0-9]+');
 
-//route::view('/form', 'form');
-//Route::post('/form',array('uses'=>'UserController@form'));
-
-//Route::match(['get','post'],'/form', ['uses'=>'UserController@form','as' => 'form']);
 
 Route::get('/form', 'UserController@form1');
 Route::post('/form', 'UserController@form2');

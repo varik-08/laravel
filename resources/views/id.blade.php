@@ -3,7 +3,10 @@
     <title>Id form</title>
 </head>
 <body>
-   {{$digits}}
+   @php
+   if($digits == null) echo "Пользователь не зарегистрирован!";
+   else echo $digits
+   @endphp
 </form>
 </body>
 </html>

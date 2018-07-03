@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function id($digits = "Пользователь не зарегистрирован!")
+    public function id($digits = null)
     {
         return view('id', compact('digits'));
     }
