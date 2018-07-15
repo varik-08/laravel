@@ -1,21 +1,23 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: varik
+ * Date: 04.07.2018
+ * Time: 23:06
+ */
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\View\View;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
-    public function id($digits = null)
+    public function index($id = null)
     {
-        return view('id', compact('digits'));
-    }
-
-    public function form1(){
-        return view('form');
-    }
-
-    public function form2(){
-        return view('form2');
+        return View('index', compact('id'));
     }
 }

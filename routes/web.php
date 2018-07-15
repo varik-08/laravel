@@ -11,11 +11,5 @@
 |
 */
 
-Route::view('/','welcome');
+Route::get('/{id?}', 'UserController@index');
 
-
-Route::get('/id{digits?}', 'UserController@id')->where('digits','[0-9]+');
-
-
-Route::get('/form', 'UserController@form1');
-Route::post('/form', 'UserController@form2');
