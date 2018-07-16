@@ -13,6 +13,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\View\View;
+use App\Models\Task;
+use App\Models\Log;
 
 class UserController extends BaseController
 {
