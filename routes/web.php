@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/{id?}', 'UserController@index');
+Route::get('/', 'UserController@index');
+Route::get('/add/{id}','UserController@add');
 

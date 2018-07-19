@@ -15,7 +15,7 @@
     {
         echo '<tr>';
          echo '<td>'. $task->id .'</td>';
-         echo '<td><a href="/'.$count.'">'. $task->name .'</a></td>';
+         echo '<td><a href="/add/'.$count.'">'. $task->name .'</a></td>';
          echo '<td>'. $task->counter .'</td>';
         echo '</tr>';
         $count++;
