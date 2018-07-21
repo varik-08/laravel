@@ -18,11 +18,10 @@ use App\Models\Log;
 
 class UserController extends BaseController
 {
-    public function index($id = null)
+    public function index()
     {
         $tasks = Task::all();
-        $count=1;
-        return view('index',compact(['tasks','count']));
+        return view('index',compact(['tasks']));
     }
     public function add($id)
     {
