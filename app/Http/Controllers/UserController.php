@@ -20,7 +20,9 @@ class UserController extends BaseController
 {
     public function index($id = null)
     {
-        return view('index');
+        $tasks = Task::all();
+        $count=1;
+        return view('index',compact(['tasks','count']));
     }
     public function add($id)
     {

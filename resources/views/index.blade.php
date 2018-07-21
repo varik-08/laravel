@@ -4,23 +4,14 @@
     @include('master')
 </head>
 <body>
-
-@php
-    use \App\Models\Task;
-    $tasks = Task::all();
-
-    echo '<table class="table" border="3">';
-    $count=1;
-    foreach ($tasks as $task )
-    {
-        echo '<tr>';
-         echo '<td>'. $task->id .'</td>';
-         echo '<td><a href="/add/'.$count.'">'. $task->name .'</a></td>';
-         echo '<td>'. $task->counter .'</td>';
-        echo '</tr>';
-        $count++;
-    }
-    echo '</table>'
-@endphp
+    <table class="table" border="3">
+        @php foreach ( $tasks as $task): @endphp
+        <tr>
+            <td>{{$task->id}}</td>
+            <td><a href="/add/{{$count++}}">{{$task->name}}</a></td>
+            <td>{{$task->counter}}</td>
+        </tr>
+        @php endforeach; @endphp
+    </table>
 </body>
 </html>
